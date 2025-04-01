@@ -1,4 +1,9 @@
+'''
+Create a bank account class with two attributes and two methods and
+display the attributes and call the methods
+'''
 class Account:
+    ''' Account class with two methods and two attributes'''
     def __init__(self,owner,balance):
         self.owner = owner
         self.balance = balance
@@ -7,10 +12,12 @@ class Account:
         return f'Account owner: {self.owner}\nAccount Balance: ${self.balance}'
 
     def deposit(self,dep_amt):
+        ''' Deposit amount to balance '''
         self.balance += dep_amt
         print(f"{self.balance} funds available")
 
     def withdraw(self,wd_amt):
+        ''' Withdraw amount from balance '''
         if self.balance >= wd_amt:
             self.balance -= wd_amt
             print(f"{self.balance} funds available")
@@ -34,4 +41,5 @@ print(acct1.balance)
 acct1.deposit(50)
 acct1.withdraw(75)
 
-# 6. Make a withdrawal that exceeds the account balance acct1.withdraw(5000)
+# 6. Make a withdrawal that exceeds the account balance
+acct1.withdraw(5000)
