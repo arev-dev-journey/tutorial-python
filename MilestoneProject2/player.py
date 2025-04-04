@@ -13,7 +13,7 @@ class Player:
 
     def add_cards(self,new_cards):
         '''add one card'''
-        if type(new_cards) == type([]):
+        if isinstance(new_cards,list):
             self.all_cards.extend(new_cards)
         else:
             self.all_cards.append(new_cards)
