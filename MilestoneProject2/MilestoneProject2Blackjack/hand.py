@@ -1,3 +1,5 @@
+from card import Card
+from deck import Deck
 class Hand:
     def __init__(self):
         self.cards = []
@@ -5,7 +7,8 @@ class Hand:
         self.aces = 0
 
     def add_cards(self,card):
-        padd
+        self.cards.append(card)
+        self.value += values[card.rank]
 
     def adjust_for_ace(self):
         pass
